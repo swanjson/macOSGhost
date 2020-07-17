@@ -62,7 +62,7 @@ They responded by filling my entire bedroom with cups of water. It was definitel
 3.	In your terminal run `chmod +x script.sh` to make the script executable in terminal.
 4. Hide the script.sh within their file directory, but remember the path to it.
 5. In your terminal run `crontab -e`. Based on the following crontab rules, set your time and script location:
-
+```
 	* * * * * "command to be executed"
 	- - - - -
 	| | | | |
@@ -71,7 +71,9 @@ They responded by filling my entire bedroom with cups of water. It was definitel
 	| | --------- Day of month (1 - 31)
 	| ----------- Hour (0 - 23)
 	------------- Minute (0 - 59)
+```
 	Example: `40 14 * * 1,3,5 /PATH/TO/script.sh` <- this will run script.sh at 2:40pm on Mondays Wednesdays and Fridays
+
 6. Save and exit crontab, then wait and see!
 
 
