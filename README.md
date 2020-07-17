@@ -1,5 +1,7 @@
 # Mac OS Ghost
-An automatic 
+Automatically forces your macbook to turn volume to max and dictate a dedicated phrase on a loop. It runs off a predetermined schedule.
+
+Uses bash scripting and crontab. Works on Mac OS X.
 
 ### Background
 I found the `say` feature in Mac OS' shell absolutely hilarious. It dictates anything passed in as arguments. I love pranking friends with this feature. My go usage was while friends were in the university library bathroom I would put a delay on `say` feature. Then when the delay expires, the computer spouts come embarassing line. Again, hilarious. Example: 
@@ -104,10 +106,9 @@ chmod +x script.sh
 ``` bash
 crontab -e
 ```
-copy into crontab
-Example: `40 14 * * 1,3,5 /PATH/TO/script.sh` <- this will run script.sh at 2:40pm on Mondays Wednesdays and Fridays
 
-``` crontab line explaination
+``` crontab 
+# line explaination
 * * * * * "command to be executed"
 - - - - -
 | | | | |
@@ -117,6 +118,7 @@ Example: `40 14 * * 1,3,5 /PATH/TO/script.sh` <- this will run script.sh at 2:40
 | ----------- Hour (0 - 23)
 ------------- Minute (0 - 59)
 ```
+Example: `40 14 * * 1,3,5 /PATH/TO/script.sh` <- this will run script.sh at 2:40pm on Mondays Wednesdays and Fridays
 
 This should copy info to the crontab
 `(crontab -l 2>/dev/null; echo "*/5 * * * * /path/to/job -with args") | crontab -`
