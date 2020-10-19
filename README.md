@@ -72,7 +72,7 @@ They responded by filling my entire bedroom with cups of water. It was definitel
 	| ----------- Hour (0 - 23)
 	------------- Minute (0 - 59)
 ```
-	Example: `40 14 * * 1,3,5 /PATH/TO/script.sh` <- this will run script.sh at 2:40pm on Mondays Wednesdays and Fridays
+Example: `40 14 * * 1,3,5 /PATH/TO/script.sh` <- this will run script.sh at 2:40pm on Mondays Wednesdays and Fridays
 
 6. Save and exit crontab, then wait and see!
 
